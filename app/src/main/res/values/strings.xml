@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">imageapp</string>
+    <string name="image_description">Image affichée</string>
+    <string name="texte_default">Network level:</string>
+    <string name="Animal">Animal:</string>
+    <string name="Home">Home</string>
+    <string name="price"> 0€</string>
+    <string name="test_api">test Catalogue</string>
+    <string name="response">Response_API</string>
+    <string name="statut">Statut</string>
+
+
+    <string-array name="jour">
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+        <item>Saturday</item>
+        <item>Sunday</item>
+    </string-array>
+</resources>

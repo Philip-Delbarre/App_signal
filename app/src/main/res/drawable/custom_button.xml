@@ -1,0 +1,23 @@
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- État pressé -->
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <solid android:color="#FF9800"/> <!-- orange quand pressé -->
+            <corners android:radius="12dp"/>
+            <stroke android:width="2dp" android:color="#000000"/>
+        </shape>
+    </item>
+
+    <!-- État normal -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#4CAF50"/> <!-- vert par défaut -->
+            <corners android:radius="12dp"/>
+            <stroke android:width="2dp" android:color="#000000"/>
+        </shape>
+    </item>
+
+
+
+</selector>
