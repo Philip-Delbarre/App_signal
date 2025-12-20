@@ -12,26 +12,25 @@ import android.widget.Button;
 
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.splashscreen.SplashScreen;
 
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
-
     ImageView myImageView;
     private TextView acceuil;
-    private LinearLayout home;
-    private LinearLayout signal;
-
-    private ListView listViewDays;
-    private String networkValue;
 
 
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        // Active le SplashScreen moderne
+        SplashScreen.installSplashScreen(this);
+        setTheme(R.style.Theme_MyApp);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 

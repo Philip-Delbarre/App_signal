@@ -15,20 +15,25 @@ public class NetManager {
         this.cm = cm;
     }
 
-    public String statusFeedback ( Network activeNetwork)  {
+    public String statusFeedback ( Network network)  {
 
-    String txtRetour;
-        if (activeNetwork != null) {
-            NetworkCapabilities caps = this.cm.getNetworkCapabilities(activeNetwork);
-            if (caps != null && caps.hasCapability(NetworkCapabilities.NET_CAPABILITY_INTERNET)) {
-                txtRetour = "Connecté à Internet ✅";
-
-            } else {
-                txtRetour = "Pas de connexion mobile";
-            }
+        if (cm == null) {
+            return "Service réseau indisponible";
         }
-        else { txtRetour = "Pas de connexion";}
 
-        return txtRetour;
+        if (network == null) {
+            return "Aucun réseau actif";
+        }
+
+        NetworkCapabilities caps = cm.getNetworkCapabilities(network);
+        if (caps == null) {
+            return "Pas de capacités réseau";
+        }
+
+        if (caps.hasCapability(NetworkCapabilities.NET_CAPABILITY_INTERNET)) {
+            return "Connecté à Internet";
+        } else {
+            return "Pas d'accès Internet";
+        }
     }
 }

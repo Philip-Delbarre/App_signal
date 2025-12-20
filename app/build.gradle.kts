@@ -36,9 +36,12 @@ dependencies {
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation("com.squareup.okhttp3:okhttp:4.12.0")
+    implementation("androidx.core:core-splashscreen:1.0.1")
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+
+
     // Ajout direct d’OkHttp
 
 }

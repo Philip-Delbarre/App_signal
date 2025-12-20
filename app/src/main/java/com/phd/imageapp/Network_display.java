@@ -85,7 +85,13 @@ public void incCompteur(){
 public String resfreshConnectivity () {
 
         ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        if (cm == null) {
+            return "Pas de service réseau";
+        }
         Network activeNetwork = cm.getActiveNetwork();
+        if (activeNetwork == null) {
+            return "Aucun réseau détecté";
+        }
 
         NetManager statutReseau = new NetManager(cm, textReseau.getText().toString(), activeNetwork);
         txtRetour = statutReseau.statusFeedback(activeNetwork);
