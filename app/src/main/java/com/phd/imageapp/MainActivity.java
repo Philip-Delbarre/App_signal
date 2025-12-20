@@ -15,10 +15,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
     ImageView myImageView;
+    private TextView acceuil;
     private LinearLayout home;
     private LinearLayout signal;
 
@@ -34,7 +36,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         myImageView = findViewById(R.id.teddy);  // L'image est déjà définie dans le XML via android:src
-
+        acceuil = findViewById(R.id.txtEntry);
+        String myWelcomMessage = "App de test App Center";
+        acceuil.setText(myWelcomMessage.toUpperCase());
 
         Button refreshBtn = findViewById(R.id.refresh);
         refreshBtn.setOnClickListener(V -> {

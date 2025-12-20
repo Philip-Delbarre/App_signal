@@ -8,6 +8,9 @@
     <string name="test_api">test Catalogue</string>
     <string name="response">Response_API</string>
     <string name="statut">Statut</string>
+    <string name="pays">Pays</string>
+    <string name="acceuil">acceuil</string>
+
 
 
     <string-array name="jour">

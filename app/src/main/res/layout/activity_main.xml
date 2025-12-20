@@ -14,29 +14,20 @@
         android:contentDescription="@string/image_description"
         android:src="@drawable/teddy" />
 
-    <TextView
-        android:id="@+id/Network_"
-        android:layout_width="335dp"
-        android:layout_height="wrap_content"
-        android:text="@string/texte_default" />
-    <TextView
-        android:id="@+id/Animal_"
-        android:layout_width="335dp"
-        android:layout_height="wrap_content"
-        android:text="@string/Animal"
-        android:background="@color/design_default_color_surface"
-         />
 
-    <ListView
-        android:id="@+id/listViewDays"
-        android:layout_width="match_parent"
-        android:layout_height="220dp"
-        android:divider="@android:color/black"
-        android:dividerHeight="1dp"
-        android:layout_marginBottom="10dp"/>
+    <TextView
+        android:id="@+id/txtEntry"
+        android:layout_marginTop="100dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/design_default_color_surface"
+        android:text="Test du Back end" />
+
 
     <Button
+
         android:id="@+id/refresh"
+        android:layout_marginTop="30dp"
         android:layout_width="130dp"
         android:layout_height="50dp"
         android:text="Signal"

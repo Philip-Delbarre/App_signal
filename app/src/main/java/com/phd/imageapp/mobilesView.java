@@ -23,13 +23,14 @@ public class mobilesView extends AppCompatActivity {
         setContentView(R.layout.list_view_mobiles); // la liste gonflée
 
         mobileCatalog = new ArrayList<>();
-        mobileCatalog.add(new ListItems("Samsung", 130));
+        mobileCatalog.add( new ListItems("Samsung", 130));
         mobileCatalog.add( new ListItems("Oppo", 320));
         mobileCatalog.add( new ListItems("Apple", 790));
 
 
         mobileList = findViewById(R.id.listViewMobiles);
         mobileList.setAdapter(new ArrayAdapter(this, mobileCatalog)); // tu passes ta liste d'objet à ta classe ArrayAdpter
+        // ArrayAdapter est la classe crée de manière ad hoc pour gonfler la vue unitaire
 
         btnHome = (Button) findViewById(R.id.refresh);
         btnHome.setOnClickListener(v -> finish());

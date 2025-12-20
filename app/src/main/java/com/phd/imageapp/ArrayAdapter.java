@@ -33,7 +33,7 @@ public class ArrayAdapter extends BaseAdapter {
     @Override
     public ListItems getItem(int position) {
         return listItems.get(position);
-    }
+    } // get(arg int position) est une méthode intrinseque au liste java
 
     @Override
     public long getItemId(int position) {
