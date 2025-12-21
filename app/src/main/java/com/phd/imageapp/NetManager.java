@@ -31,7 +31,7 @@ public class NetManager {
         }
 
         if (caps.hasCapability(NetworkCapabilities.NET_CAPABILITY_INTERNET)) {
-            return "Connecté à Internet";
+            return "Connecté à Internet \uD83D\uDCF6 - Rafraichi \uD83D\uDC4D";
         } else {
             return "Pas d'accès Internet";
         }
