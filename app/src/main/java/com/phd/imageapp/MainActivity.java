@@ -28,9 +28,10 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
-        // Active le SplashScreen moderne
-        SplashScreen.installSplashScreen(this);
-        setTheme(R.style.Theme_MyApp);
+        // Active le SplashScreen moderne --- tentative infructueuse -------------
+        //SplashScreen.installSplashScreen(this);
+        //setTheme(R.style.Theme_MyApp);
+        // ======================== retour en arrière =====================
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
