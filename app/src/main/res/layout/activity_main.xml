@@ -17,7 +17,7 @@
 
     <TextView
         android:id="@+id/txtEntry"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="30dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/design_default_color_surface"
@@ -47,6 +47,14 @@
         android:layout_width="130dp"
         android:layout_height="50dp"
         android:text="Url Catalog"
+        android:textSize="15sp"
+        android:background="@drawable/custom_button"/>
+
+    <Button
+        android:id="@+id/btnGetUrl"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:text="Get PL Catalog"
         android:textSize="15sp"
         android:background="@drawable/custom_button"/>
 

@@ -26,6 +26,7 @@
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
+
             </intent-filter>
         </activity>
 
@@ -35,6 +36,7 @@
         <activity android:name=".Network_display" />
         <activity android:name=".mobilesView" />
         <activity android:name=".CheckUrlActivity" />
+        <activity android:name=".GetJsonContent" />
 
     </application>
 </manifest>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center">
+
+
+    <TextView
+        android:id="@+id/mobileModelPL"
+        android:layout_width="303dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/border_list"
+        android:paddingLeft="20dp"
+        android:text="samsumg" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/catalogName"
+            android:layout_width="206dp"
+            android:layout_height="254dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="28dp"
+            android:text="catalogue"
+            android:textAllCaps="true"
+            android:textSize="13sp" />
+
+        <ImageView
+            android:id="@+id/imageGalaxyA36"
+            android:layout_width="140dp"
+            android:layout_height="310dp"
+            android:contentDescription="@string/image_description"
+            android:src="@drawable/galaxy_a36" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/retourTestCat"
+        android:layout_width="206dp"
+        android:layout_height="25dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="28dp"
+        android:text="Result"
+        android:textSize="15sp" />
+
+    <Button
+        android:id="@+id/btnThread"
+        android:layout_width="142dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginEnd="3dp"
+        android:background="@drawable/custom_button"
+        android:text="launch API test" />
+
+
+
+    <Button
+        android:id="@+id/btn_Home_"
+        android:layout_marginTop="10sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:text="@string/Home"
+        android:background="@drawable/custom_button"
+
+        />
+
+</LinearLayout>

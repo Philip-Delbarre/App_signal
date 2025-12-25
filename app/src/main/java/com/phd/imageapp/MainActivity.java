@@ -62,6 +62,13 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
+        Button btnGetUrl = findViewById(R.id.btnGetUrl);
+        btnGetUrl.setOnClickListener(V -> {
+
+            Intent intent = new Intent(MainActivity.this, GetJsonContent.class);
+            startActivity(intent);
+        });
+
 
     }
 
