@@ -6,21 +6,21 @@ import java.util.List;
 public class Applications {
 
     public String versionLabel;
-    private List<String> permissions;
+    private String packageName;
 
     // Constructor logic here
-    public Applications(String versionLabel, List<String> permissions) {
+    public Applications(String versionLabel, String packageName) {
 
         this.versionLabel = versionLabel;
-        this.permissions = permissions;
+        this.packageName = packageName;
     }
 
     public String getVersionLabel() {
-        return this.versionLabel;
+        return this.versionLabel ;
     }
 
-    public List<String> getPermissions() {
-        return this.permissions;
+    public String getPackageName() {
+        return this.packageName ;
     }
 
 }

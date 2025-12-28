@@ -32,7 +32,8 @@ public class Network_display extends AppCompatActivity {
         randomImageNetwork = findViewById(R.id.teddy_image);
 
         textReseau = findViewById(R.id.netLevel);
-        textReseau.setText(" ==== \uD83D\uDC3B  Teddy  \uD83D\uDC3B ===== ");
+        textReseau.setText(" ===== \uD83D\uDC3B  Teddy  \uD83D\uDC3B ===== ");
+        textReseau.setText(" ===== \uD83D\uDC3B  Teddy  \uD83D\uDC3B ===== ");
         textConnect = findViewById(R.id.netConnect);
         textConnect.setText(resfreshConnectivity());
     }

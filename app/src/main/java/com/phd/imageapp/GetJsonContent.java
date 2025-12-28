@@ -5,6 +5,7 @@ import android.util.Log;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import com.phd.imageapp.sub_class.Alternate_data;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -54,14 +55,17 @@ public class GetJsonContent extends AppCompatActivity {
                 runOnUiThread(() -> {
                     if (!json.equals("Erreur")) {
                         List<Applications> appList = parseJson(json);
-                        String afficheApp="= List of the apps = \n";
+
+                        // ============ En tête de la liste ======================
+                        String afficheApp="-\uD83D\uDE80 List of the apps \uD83D\uDE80-\n";
+                        // + app.getPackageName() pour rajouter le nom de package
                         for (Applications app : appList) {
                             txtCatalog.setText(afficheApp += "name: " +app.getVersionLabel() + "\n");
                         }
-                        txtResult.setText("Test Catalogue is OK");
+                        txtResult.setText("Test Catalogue is OK : \uD83D\uDC4D");
                     } else {
-                        txtCatalog.setText("List des app : vide ");
-                        txtResult.setText("Test Catalogue is KO");
+                        txtCatalog.setText("List des app : vide - \uD83D\uDC4E\uD83C\uDFFC");
+                        txtResult.setText("Test Catalogue is KO - \uD83D\uDC4E\uD83C\uDFFC");
                     }
 
                 });
@@ -106,7 +110,7 @@ public class GetJsonContent extends AppCompatActivity {
         Gson gson = new Gson();
         Catalogue app = gson.fromJson(json, Catalogue.class);
         // Affiche le corps de la réponse (JSON)
-        List<Applications> appList = app.getApplications();
+        List<Applications> appList = app.getApplications() ;
         return appList;
     }
 }

@@ -1,6 +1,7 @@
 package com.phd.imageapp;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.ImageView;
@@ -9,6 +10,9 @@ import android.widget.TextView;
 
 import android.widget.ListView;
 import android.widget.Button;
+import android.widget.VideoView;
+import android.widget.MediaController;
+
 
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,7 +23,7 @@ import java.net.URL;
 import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
-    ImageView myImageView;
+    VideoView videoView;
     private TextView acceuil;
 
 
@@ -35,7 +39,19 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        myImageView = findViewById(R.id.teddy);  // L'image est déjà définie dans le XML via android:src
+        VideoView videoView = findViewById(R.id.teddy_video);
+        String path = "android.resource://" + getPackageName() + "/" + R.raw.teddy_logo; Uri uri = Uri.parse(path);
+        videoView.setVideoURI(uri);
+        MediaController mediaController = new MediaController(this);
+        mediaController.setAnchorView(videoView);
+        videoView.setMediaController(mediaController);
+
+        videoView.setOnClickListener(v -> {videoView.start();}
+        );
+
+
+        // L'image est déjà définie dans le XML via android:src
+
         acceuil = findViewById(R.id.txtEntry);
         String myWelcomMessage = "App de test App Center";
         acceuil.setText(myWelcomMessage.toUpperCase());
