@@ -15,10 +15,7 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="ImageApp"
-        android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-        >
-
-
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
 
         <activity
             android:name=".MainActivity"
@@ -30,13 +27,11 @@
             </intent-filter>
         </activity>
 
-
-
-
         <activity android:name=".Network_display" />
         <activity android:name=".mobilesView" />
         <activity android:name=".CheckUrlActivity" />
         <activity android:name=".GetJsonContent" />
+        <activity android:name=".Satisfaction" />
 
     </application>
 </manifest>

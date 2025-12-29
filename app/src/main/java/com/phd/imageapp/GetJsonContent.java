@@ -1,5 +1,6 @@
 package com.phd.imageapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
@@ -44,6 +45,13 @@ public class GetJsonContent extends AppCompatActivity {
 
         Button home_ = findViewById(R.id.btn_Home_);
         home_.setOnClickListener(v -> finish());
+
+        Button survey = findViewById(R.id.btn_survey_);
+        survey.setOnClickListener(v -> {
+        Intent intent = new Intent(GetJsonContent.this, Satisfaction.class);
+        startActivity(intent);}
+        );
+
 
 // lance une thread de
 

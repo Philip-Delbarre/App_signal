@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="35dp"
+        android:textSize="25dp"
+        android:textColor="@color/black"
+        android:text="How satisfied are you ?"
+        android:background="@drawable/custom_button_orange"/>
+
+    <!-- Ligne des 3 images + labels -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="60dp">
+
+        <LinearLayout
+            android:layout_width="108dp"
+            android:layout_height="200dp"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/img_cocker_left"
+                android:layout_width="107dp"
+                android:layout_height="150dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/cocker_left" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:text="unsatisfied"
+                android:textAlignment="center" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="108dp"
+            android:layout_height="200dp"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/img_cocker_face"
+                android:layout_width="108dp"
+                android:layout_height="150dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/cocker_face" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="correct"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:textAlignment="center" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="108dp"
+            android:layout_height="200dp"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/img_cocker_right"
+                android:layout_width="108dp"
+                android:layout_height="150dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/cocker_right" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:text="Satisfied"
+                android:textAlignment="center" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Texte en dessous -->
+
+
+    <Button
+        android:id="@+id/btn__Home__"
+        android:layout_marginTop="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:text="@string/Home"
+        android:background="@drawable/custom_button"
+
+        />
+</LinearLayout>
