@@ -51,7 +51,7 @@ public class Network_display extends AppCompatActivity {
 
         btnRefreshConnect = findViewById(R.id.btnRefreshConnect);
         btnRefreshConnect.setOnClickListener(v-> {
-            textConnect.setText(resfreshConnectivity());
+            textConnect.setText(resfreshConnectivity()+ " rafraichi");
                  }
        );
 

@@ -28,7 +28,7 @@ android {
         debug {
             isDebuggable = true
         }
-    }   // ✅ ← ACCOLADE QUI MANQUAIT ICI
+    }
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
@@ -36,12 +36,15 @@ android {
     }
 }
 
+
 dependencies {
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation("com.squareup.okhttp3:okhttp:4.12.0")
     implementation("androidx.core:core-splashscreen:1.0.1")
     implementation("com.google.code.gson:gson:2.10.1")
+    implementation("com.google.android.material:material:1.12.0")
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)

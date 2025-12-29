@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         VideoView videoView = findViewById(R.id.teddy_video);
-        String path = "android.resource://" + getPackageName() + "/" + R.raw.teddy_logo; Uri uri = Uri.parse(path);
+        String path = "android.resource://" + getPackageName() + "/" + R.raw.logo_anime; Uri uri = Uri.parse(path);
         videoView.setVideoURI(uri);
         MediaController mediaController = new MediaController(this);
         mediaController.setAnchorView(videoView);

@@ -1,14 +1,37 @@
 <resources>
 
-    <!-- Thème AppCompat pour ton activité -->
-    <style name="Theme.MyApp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="Theme.ImageApp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+
+        <!-- Couleurs -->
         <item name="colorPrimary">@color/purple_500</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
         <item name="colorOnPrimary">@color/white</item>
+
         <item name="colorSecondary">@color/teal_200</item>
         <item name="colorSecondaryVariant">@color/teal_700</item>
         <item name="colorOnSecondary">@color/black</item>
+
+        <!-- Neutralise MaterialButton -->
+        <item name="materialButtonStyle">@style/MyClassicButton</item>
+
     </style>
 
+    <!-- Style classique pour les boutons -->
+    <style name="MyClassicButton" parent="@android:style/Widget.Button">
+        <!-- Supprime les insets internes -->
+        <item name="android:insetLeft">0dp</item>
+        <item name="android:insetRight">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+
+        <!-- Supprime les tailles minimales imposées -->
+        <item name="android:minHeight">0dp</item>
+        <item name="android:minWidth">0dp</item>
+
+        <!-- Supprime le padding automatique -->
+        <item name="android:padding">0dp</item>
+    </style>
 
 </resources>
+
+

@@ -10,7 +10,11 @@
     <string name="statut">Statut</string>
     <string name="pays">Select one Country</string>
     <string name="acceuil">acceuil</string>
-
+    <string name="survey">Survey</string>
+    <string name="bear_desc">bear</string>
+    <string name="input">donne ton nom</string>
+    <string name="refresh_connect">Refresh</string>
+    <string name="rotate">Network loop</string>
 
 
     <string-array name="jour">
