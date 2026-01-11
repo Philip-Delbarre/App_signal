@@ -4,7 +4,16 @@
     android:orientation="vertical"
     android:gravity="center">
 
+    <TextView
 
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginBottom="8dp"
+        android:textColor="@color/black"
+        android:text="Click one country on the list"
+
+        />
 
         <ListView
 
@@ -22,7 +31,7 @@
         android:layout_height="30dp"
         android:layout_marginTop="18dp"
         android:layout_marginBottom="80dp"
-        android:text="@string/pays"
+
 
        />
 

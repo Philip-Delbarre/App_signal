@@ -1,5 +1,7 @@
 package com.phd.imageapp;
 
+import static android.view.View.INVISIBLE;
+
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -10,6 +12,7 @@ import android.widget.TextView;
 
 import android.widget.ListView;
 import android.widget.Button;
+import android.widget.Toast;
 import android.widget.VideoView;
 import android.widget.MediaController;
 
@@ -25,6 +28,11 @@ import java.util.Locale;
 public class MainActivity extends AppCompatActivity {
     VideoView videoView;
     private TextView acceuil;
+    private int counterView;
+    private String path;
+    private Uri uri;
+
+
 
 
 
@@ -38,23 +46,38 @@ public class MainActivity extends AppCompatActivity {
         // ======================== retour en arrière =====================
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        VideoView videoView = findViewById(R.id.teddy_video);
-        String path = "android.resource://" + getPackageName() + "/" + R.raw.logo_anime; Uri uri = Uri.parse(path);
-        videoView.setVideoURI(uri);
-        MediaController mediaController = new MediaController(this);
-        mediaController.setAnchorView(videoView);
-        videoView.setMediaController(mediaController);
-
-        videoView.setOnClickListener(v -> {videoView.start();}
-        );
-
-
-        // L'image est déjà définie dans le XML via android:src
-
+        counterView=0;
+        // ================
         acceuil = findViewById(R.id.txtEntry);
         String myWelcomMessage = "App de test App Center";
         acceuil.setText(myWelcomMessage.toUpperCase());
+        // ================
+
+        videoView = findViewById(R.id.teddy_video);
+        path = "android.resource://" + getPackageName() + "/" + R.raw.logo_anime;
+        uri = Uri.parse(path);
+        videoView.setVideoURI(uri);
+        //MediaController mediaController = new MediaController(this);
+        //mediaController.setAnchorView(videoView);
+        //videoView.setMediaController(mediaController);
+            Toast.makeText(this, "compteur" + Integer.toString(counterView) , Toast.LENGTH_LONG).show();
+
+        videoView.setClickable(true);
+        videoView.setFocusable(true);
+        videoView.setFocusableInTouchMode(true);
+        Log.d("CLICK", "listener attached");
+
+        videoView.setOnClickListener(v -> {
+           videoView.start();
+           if(counterView==3 )
+            {
+            Log.d("counter", Integer.toString(counterView) );
+                Toast.makeText(MainActivity.this, "compteur" + Integer.toString(counterView) , Toast.LENGTH_LONG).show();
+                videoView.setVisibility(INVISIBLE);   }
+                counterView++;
+            acceuil.setText(String.valueOf(counterView));
+        });
+
 
         Button refreshBtn = findViewById(R.id.refresh);
         refreshBtn.setOnClickListener(V -> {
@@ -87,6 +110,8 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
+
 
    
     @Override
